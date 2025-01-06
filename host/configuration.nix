@@ -74,7 +74,9 @@
     pkgs.base16-schemes
     pkgs.eza
     pkgs.fastfetch
-    pkgs.lazygit
+    pkgs.bat
+    pkgs.zoxide
+    pkgs.fzf
   ];
 
   programs.hyprland = {
