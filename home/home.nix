@@ -5,10 +5,10 @@
     imports = [
       ../config/hyprland.nix
       ../config/nixcord.nix
+      ../config/waybar.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;
-
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
 

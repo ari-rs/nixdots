@@ -75,9 +75,11 @@
     pkgs.eza
     pkgs.fastfetch
     pkgs.bat
-    pkgs.zoxide
     pkgs.fzf
+    pkgs.zoxide
+    pkgs.hyprshot
   ];
+
 
   programs.hyprland = {
     enable = true;
