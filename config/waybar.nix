@@ -14,8 +14,8 @@
         margin-right = 4;
         modules-left = [ "hyprland/workspaces" "clock" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "pulseaudio" "pulseaudio#microphone" "tray" "cpu" "memory" ];
-        output = [ "DP-1" "HDMI-A-1" ];
+        modules-right = [ "temperature" "cpu" "memory" "pulseaudio" ];
+        output = [ "DP-1" ];
         "pulseaudio" = {
           format = "{icon} {volume}";
           format-muted = "󰝟";
@@ -88,34 +88,94 @@
     style = 
     ''
 * {
-  border: none;
-  margin: 0;
-  min-height: 0;
+  font-family: JetBrainsMono Nerd Font, feather;
+  font-weight: 900;
   font-size: 14px;
-  font-weight: bold;
+  color: #c0caf5;
 }
-window#waybar > box {
-  background-color: transparent;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
-  margin: 2px;
+
+/* Set background color of main waybar window */
+window#waybar {
+  background: rgba(21, 22, 30, 0.5);
 }
+
+/* Set background color of tooltips */
+tooltip {
+  background: #1e1e2e;
+}
+
+/* Set workspace text color and padding */
 #workspaces button {
-  border-radius: 8px;
-  box-shadow: none;
-  margin: 2px 0;
-  padding: 0 2px;
-  transition: none;
+  padding: 0;
 }
-#workspaces button:hover {
-  background: @hover-bg;
-  text-shadow: none;
-  box-shadow: none;
-}
+
+/* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-  margin: 2px;
-  padding: 0 6px;
+  border-bottom: 2px solid #7aa2f7;
+  border-radius: 0;
+  margin-bottom: 2px;
+}
+
+/* More workspace stuff for highlighting on hover */
+#workspaces button.focused {
+  color: #a6adc8;
+}
+
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#custom-kernel,
+#custom-pacman,
+#workspaces,
+#clock,
+#window,
+#temperature,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#mpd {
+  background: rgba(21, 22, 30, 0.7);
+  padding: 0 10px;
+  margin: 3px 0;
+  border: 0;
+}
+
+#window.empty {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Set up rounding to make these modules look like separate pills */
+#mpd {
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+#tray {
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+#window {
+  border-radius: 8px;
+}
+
+/* Rounding only on left of module */
+#temperature {
+  border-radius: 8px 0 0 8px;
+}
+
+/* Rounding only on right of module(s) */
+#custom-pacman,
+#custom-kernel {
+  border-radius: 0 8px 8px 0;
 }
 
     '';

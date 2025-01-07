@@ -106,7 +106,7 @@
       gtk.enable = true;
       hyprcursor.enable = true;
       name = lib.mkForce "Bibata-Modern-Ice";
-      size = lib.mkForce 24;
+      size = lib.mkForce 20;
       package = lib. mkForce pkgs.bibata-cursors;
     };
 }

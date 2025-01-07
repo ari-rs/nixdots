@@ -23,16 +23,15 @@
 
   outputs = { nixpkgs, home-manager, chaotic, stylix, nvf, ... }@inputs:
     let
-          system = "x86_64-linux";
+    system = "x86_64-linux";
 	  host = "hydrogen";
 	  username = "ari";
     in
     {
-
       nixosConfigurations = {
         "${host}" = nixpkgs.lib.nixosSystem { 
           specialArgs = {
-            inherit system;
+      inherit system;
 	    inherit inputs;
 	    inherit username;
 	    inherit host;

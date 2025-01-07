@@ -5,7 +5,7 @@
     imports = [
       ../config/hyprland.nix
       ../config/nixcord.nix
-      ../config/waybar.nix
+      ../config/waybar-2.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;
