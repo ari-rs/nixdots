@@ -6,9 +6,12 @@
       ../config/hyprland.nix
       ../config/nixcord.nix
       ../config/waybar.nix
+      ../config/ncmpcpp.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;
+    programs.yazi.enable = true;
+    services.dunst.enable = true;
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
 

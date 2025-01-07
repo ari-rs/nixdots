@@ -9,6 +9,7 @@
       ../modules/steam.nix # Steam
       ../modules/fish.nix # Fish
       ../modules/nvf.nix # NVF (neovim config)
+      ../modules/mpd.nix # MPD
     ];
 
   # Bootloader.
@@ -78,7 +79,24 @@
     pkgs.fzf
     pkgs.zoxide
     pkgs.hyprshot
+    pkgs.playerctl
+    pkgs.swappy
+    pkgs.wlogout
   ];
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+  ];
+  environment.variables = {
+    XDG_DESKTOP_DIR = "$HOME/Desktop";
+    XDG_DOCUMENTS_DIR = "$HOME/Documents";
+    XDG_DOWNLOAD_DIR = "$HOME/Downloads";
+    XDG_MUSIC_DIR =" $HOME/Music";
+    XDG_PICTURES_DIR = "$HOME/Pictures";
+    XDG_VIDEOS_DIR = "$HOME/Videos";
+  };
 
 
   programs.hyprland = {

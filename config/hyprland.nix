@@ -21,19 +21,22 @@
 	  "QT_QPA_PLATFORM,wayland"
 	  "QT_WAYLAND_DISABLE_WINDOWDECORATION"
 	];
+  layerrule = [
+    "noanim, selection"
+  ];
 	monitor = [
-          "DP-1, 1920x1080@240, 0x0, 1.0"
+    "DP-1, 1920x1080@240, 0x0, 1.0"
 	  "HDMI-A-1, 1920x1080@75, 1920x0, 1.0"
 	];
 	bindm = [
-          "$mod, mouse:272, movewindow"
+    "$mod, mouse:272, movewindow"
 	  "$mod, mouse:273, resizewindow"
 	];
-        bind = [
+  bind = [
 	  # App Launches
 	  "$mod, tab, exec, $launcher"
-          "$mod, return, exec, $terminal"
-          # Manip
+    "$mod, return, exec, $terminal"
+    # Manip
 	  "$mod, Q, killactive"
 	  "$mod, F, fullscreen"
 	  # Workspaces
@@ -56,8 +59,46 @@
 	  "$mod SHIFT, 7, movetoworkspace, r~7"
 	  "$mod SHIFT, 8, movetoworkspace, r~8"
 	  "$mod SHIFT, 9, movetoworkspace, r~9"
-	  "$mod SHIFT, 10, movetoworkspace, r~10"
+	  "$mod SHIFT, 0, movetoworkspace, r~10"
+    "$mod, O, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle" # Mute bind
+    "CTRL, ESCAPE, exec, hyprshot -m region" # Screenshot bind
+    "SUPER, ESCAPE, exec, wlogout" # Logout Menu
+    "SUPER, A, togglefloating"
 	];
+  bindl = [
+    ", XF86AudioPlay, exec, playerctl play-pause"
+    ", XF86AudioNext, exec, playerctl next"
+    ", XF86AudioPrev, exec, playerctl previous"
+    ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+    ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  ];
+  workspace = [
+    "1, monitor:DP-1"
+    "2, monitor:DP-1"
+    "3, monitor:DP-1"
+    "4, monitor:DP-1"
+    "5, monitor:DP-1"
+    "6, monitor:DP-1"
+    "7, monitor:DP-1"
+    "8, monitor:DP-1"
+    "9, monitor:DP-1"
+    "10, monitor:DP-1"
+    "11, monitor:HDMI-A-1"
+    "12, monitor:HDMI-A-1"
+    "13, monitor:HDMI-A-1"
+    "14, monitor:HDMI-A-1"
+    "15, monitor:HDMI-A-1"
+    "16, monitor:HDMI-A-1"
+    "17, monitor:HDMI-A-1"
+    "18, monitor:HDMI-A-1"
+    "19, monitor:HDMI-A-1"
+    "20, monitor:HDMI-A-1"
+  ];
+  exec-once = [
+    "waybar"
+    "dunst"
+  ];
       };
     };
     # Set hyprcursor
