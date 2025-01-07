@@ -81,6 +81,8 @@
     pkgs.playerctl
     pkgs.swappy
     pkgs.wlogout
+    pkgs.heroic
+    pkgs.proton-ge-custom
   ];
   fonts.packages = with pkgs; [
     noto-fonts
