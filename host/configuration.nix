@@ -83,6 +83,7 @@
     pkgs.wlogout
     pkgs.heroic
     pkgs.proton-ge-custom
+    pkgs.lm_sensors
   ];
   fonts.packages = with pkgs; [
     noto-fonts

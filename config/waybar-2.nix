@@ -1,6 +1,7 @@
 { ... }:
 {
   programs.waybar = {
+    enable = true;
     settings = {
       mainBar = {
         layer = "top";
@@ -8,25 +9,25 @@
         modules-left = [ "hyprland/workspaces" "clock" ];
         modules-center = [ "hyprland/window" ];
         modules-right = [ "temperature" "cpu" "memory" "pulseaudio" ];
-        output = [ "DP-1" ];
+        output = [ "DP-1" "HDMI-A-1" ];
         "clock" = {
-          format = "<span color=\"#7aa2f7\"> </span>{:%H:%M:%S}";
-          format-alt = "<span color=\"#7aa2f7\"> </span>{:%d-%m-%Y}";
+          format = "<span color=\"#7aa2f7\"> </span> {:%H:%M:%S}";
+          format-alt = "<span color=\"#7aa2f7\"> </span> {:%d-%m-%Y}";
           interval = 1;
         };
         "cpu" = {
-          format = "<span color=\"#7aa2f7\"> </span>{usage}%";
+          format = "<span color=\"#7aa2f7\">  </span> {usage}%";
           interval = 2;
         };
         "memory" = {
-          format = "<span color=\"#7aa2f7\"> </span>{used}GiB";
+          format = "<span color=\"#7aa2f7\">  </span> {used}GiB";
           interval = 2;
         };
         "pulseaudio" = {
           scroll-step = 5;
-          format = "<span color=\"#7aa2f7\">{icon} </span>{volume}%";
-          format-muted = "<span color=\"#f7768e\"> </span>Muted";
-          format-icons = [ "" "" "" ];
+          format = "<span color=\"#7aa2f7\">{icon}  </span> {volume}%";
+          format-muted = "<span color=\"#7aa2f7\">  </span> Muted";
+          format-icons = [ "" " " " " ];
         };
       };
     };
@@ -48,7 +49,7 @@ tooltip {
 /* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
   border-bottom: 2px solid #7aa2f7;
-  border-radius: 0;
+  /*border-radius: 0;*/
   margin-bottom: 2px;
 }
 
@@ -88,10 +89,9 @@ tooltip {
   background: rgba(0, 0, 0, 0);
 }
 
-/* Set up rounding to make these modules look like separate pills */
-#mpd {
-  border-radius: 8px;
-  margin-left: 4px;
+#clock {
+  border-radius: 0px 8px 8px 0px;
+  margin-right: 4px;
 }
 
 #tray {
