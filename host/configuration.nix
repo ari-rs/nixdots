@@ -9,7 +9,6 @@
       ../modules/steam.nix # Steam
       ../modules/fish.nix # Fish
       ../modules/nvf.nix # NVF (neovim config)
-      ../modules/mpd.nix # MPD
     ];
 
   # Bootloader.

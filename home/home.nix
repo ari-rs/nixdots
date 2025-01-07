@@ -7,6 +7,7 @@
       ../config/nixcord.nix
       ../config/waybar.nix
       ../config/ncmpcpp.nix
+      ../config/mpd.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;
