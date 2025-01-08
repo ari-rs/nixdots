@@ -9,6 +9,7 @@
       ../modules/steam.nix # Steam
       ../modules/fish.nix # Fish
       ../modules/nvf.nix # NVF (neovim config)
+      ../modules/firewall.nix
     ];
 
   # Bootloader.
@@ -84,12 +85,16 @@
     pkgs.heroic
     pkgs.proton-ge-custom
     pkgs.lm_sensors
+    pkgs.wofi
+    pkgs.prismlauncher
+    pkgs.filezilla
   ];
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
   ];
   environment.variables = {
     XDG_DESKTOP_DIR = "$HOME/Desktop";

@@ -64,6 +64,7 @@
     "CTRL, ESCAPE, exec, hyprshot -m region" # Screenshot bind
     "SUPER, ESCAPE, exec, wlogout" # Logout Menu
     "SUPER, A, togglefloating"
+    ", F11, fullscreen"
 	];
   bindl = [
     ", XF86AudioPlay, exec, playerctl play-pause"

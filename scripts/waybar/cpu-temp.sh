@@ -28,6 +28,7 @@ get_cpu_temperature() {
 # Get the corresponding icon based on temperature
 get_temperature_icon() {
   temp_value=$1
+  #temp_int=$(echo "$temp" | awk '{print int($1)}')
   if [ "$temp_value" -ge 80 ]; then
     icon="󰸁" # High temperature
   elif [ "$temp_value" -ge 70 ]; then
@@ -39,6 +40,7 @@ get_temperature_icon() {
   fi
   echo "$icon"
 }
+
 
 # Main script execution
 cpu_frequency=$(get_cpu_frequency)
