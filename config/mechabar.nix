@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   stylix.targets.waybar.enable = false;
   programs.waybar = {
@@ -50,7 +51,7 @@
           "custom/right5"
         ];
         modules-right = [
-          "custom/media"
+          "tray"
 
           "custom/left6"
           "pulseaudio"
@@ -349,9 +350,9 @@
 }
 
 /* === theme.css === */ 
-@define-color main-fg         #cdd6f4;
-@define-color main-bg         #11111b;
-@define-color main-br         #cdd6f4;
+@define-color main-fg         ${config.lib.stylix.colors.withHashtag.base01}; 
+@define-color main-bg         ${config.lib.stylix.colors.withHashtag.base00};
+@define-color main-br         ${config.lib.stylix.colors.withHashtag.base03};
 
 @define-color active-bg       #9399b2;
 @define-color active-fg       #11111b;
@@ -364,7 +365,7 @@
 
 /* Module Colors */
 
-@define-color module-fg       #f5e0dc;
+@define-color module-fg       ${config.lib.stylix.colors.withHashtag.base05};
 @define-color workspaces      #181825;
 
 @define-color cpuinfo         #181825;
@@ -384,8 +385,8 @@
 /* State Colors */
 
 @define-color good            #f5e0dc;
-@define-color warning         #f9e2af;
-@define-color critical        #f38ba8;
+@define-color warning         ${config.lib.stylix.colors.withHashtag.base0A};
+@define-color critical        ${config.lib.stylix.colors.withHashtag.base08};
 @define-color full            #a6e3a1;
 @define-color charging        #cdd6f4;
 /* === Main Background === */

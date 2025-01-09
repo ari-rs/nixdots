@@ -7,7 +7,8 @@
     nixcord.url = "github:kaylorben/nixcord";
     nvf.url = "github:notashelf/nvf";
     stylix = {
-      url = "github:danth/stylix/master";
+      #url = "github:danth/stylix/master";
+      url = "git+file:/home/ari/Documents/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {

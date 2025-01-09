@@ -66,6 +66,13 @@
   
   # Use CachyOS kernel
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  programs.gamemode.enable = true;
+
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+
 
   environment.systemPackages = [
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -83,11 +90,12 @@
     pkgs.swappy
     pkgs.wlogout
     pkgs.heroic
-    pkgs.proton-ge-custom
     pkgs.lm_sensors
     pkgs.wofi
     pkgs.prismlauncher
     pkgs.filezilla
+    pkgs.hyprpolkitagent
+    pkgs.sddm-astronaut
   ];
   fonts.packages = with pkgs; [
     noto-fonts
