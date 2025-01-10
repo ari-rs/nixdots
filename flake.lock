@@ -2783,11 +2783,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1736462567,
-        "narHash": "sha256-5OIhHbx6kvC2pK5flSby0x6wYYWZ5DMVfcbS+MG65iI=",
+        "lastModified": 1736466539,
+        "narHash": "sha256-RYoD5iG7+PVMACwt0XW9iebrFSzB9zVSsV1W9hR11EQ=",
         "ref": "refs/heads/master",
-        "rev": "d0e7b1863a521c4c9ec0ab9c95c4c99afd039c2f",
-        "revCount": 534,
+        "rev": "401af2f1dafea3a27957dcf4346691347932c7fd",
+        "revCount": 535,
         "type": "git",
         "url": "file:/home/ari/Documents/stylix"
       },

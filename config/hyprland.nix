@@ -4,9 +4,8 @@
       enable = true;
       settings = {
         "$terminal" = "kitty";
-	"$browser" = "zen";
-	"$launcher" = "rofi -show drun";
-	"$mod" = "super";
+	      "$launcher" = "fuzzel";
+	      "$mod" = "super";
         "input:sensitivity" = "-2";
 	env = [
          # "NIXOS_OZONE_WL,1" # Electron + Wayland is broken

@@ -1,7 +1,9 @@
-{ config, inputs, ... }:
+{ pkgs, ... }:
 {
   programs.nixcord = {
     enable = true;
+    discord.vencord.package = pkgs.vencord; # Broken builds without even though
+    # It should only be needed on stables
     config = {
       plugins = {
         callTimer.enable = true;

@@ -78,7 +78,6 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     pkgs.git
     pkgs.neovim
-    pkgs.rofi-wayland
     pkgs.base16-schemes
     pkgs.eza
     pkgs.fastfetch
@@ -91,11 +90,9 @@
     pkgs.wlogout
     pkgs.heroic
     pkgs.lm_sensors
-    pkgs.wofi
     pkgs.prismlauncher
     pkgs.filezilla
     pkgs.hyprpolkitagent
-    pkgs.sddm-astronaut
   ];
   fonts.packages = with pkgs; [
     noto-fonts

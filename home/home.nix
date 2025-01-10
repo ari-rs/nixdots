@@ -12,6 +12,7 @@
     programs.kitty.enable = true;
     programs.yazi.enable = true;
     services.dunst.enable = true;
+    programs.fuzzel.enable = true;
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
 
