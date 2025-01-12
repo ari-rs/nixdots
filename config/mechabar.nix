@@ -77,7 +77,7 @@
           tooltip = false;
           min-length = 3;
           max-length = 3;
-          on-click = "rofi -show drun";
+          on-click = "fuzzel";
         };
         "hyprland/workspaces" = {
           on-scroll-up = "hyprctl dispatch workspace -1";

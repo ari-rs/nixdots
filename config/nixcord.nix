@@ -4,7 +4,26 @@
     enable = true;
     discord.vencord.package = pkgs.vencord; # Broken builds without even though
     # It should only be needed on stables
+    quickCss = ''
+/* Hides Store and Shop button */
+[href="/store"], 
+[href='/shop']
+{
+  display: none;
+}
+/* Hide Nitro Gift button */
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+
+/* Hide sticker picker button */
+button[aria-label="Open sticker picker"] {
+  display: none;
+}
+      '';
     config = {
+      useQuickCss = true;
       plugins = {
         callTimer.enable = true;
 	fakeNitro.enable = true;

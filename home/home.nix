@@ -6,7 +6,7 @@
       ../config/hyprland.nix
       ../config/nixcord.nix
       ../config/mechabar.nix
-    #../config/waybar-2.nix
+      ../config/fastfetch.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;

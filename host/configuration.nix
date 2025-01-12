@@ -5,7 +5,6 @@
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ../modules/nvidia.nix # Nvidia Drivers
       ../modules/stylix.nix # Stylix
-      ../modules/krisp-patcher.nix # Patches Krisp into Discord NEED TO RUN KRISP-PATCHER
       ../modules/steam.nix # Steam
       ../modules/fish.nix # Fish
       ../modules/nvf.nix # NVF (neovim config)
@@ -17,12 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   # Audio pipewire
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   networking.hostName = "hydrogen"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -80,7 +73,6 @@
     pkgs.neovim
     pkgs.base16-schemes
     pkgs.eza
-    pkgs.fastfetch
     pkgs.bat
     pkgs.fzf
     pkgs.zoxide
@@ -93,6 +85,9 @@
     pkgs.prismlauncher
     pkgs.filezilla
     pkgs.hyprpolkitagent
+    pkgs.rustup
+    pkgs.gcc
+    pkgs.rnnoise-plugin
   ];
   fonts.packages = with pkgs; [
     noto-fonts

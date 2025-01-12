@@ -23,6 +23,10 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+  fileSystems."/mnt/HDrive" = 
+    { device = "/dev/disk/by-uuid/0001f19f-3057-48ee-b47a-c212ba41f16a";
+      fsType = "ext4";
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/b351e9fa-f22a-484d-bfb5-0bf03f1385b8"; }

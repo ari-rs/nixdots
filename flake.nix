@@ -8,7 +8,7 @@
     nvf.url = "github:notashelf/nvf";
     stylix = {
       #url = "github:danth/stylix/master";
-      url = "git+file:/home/ari/Documents/stylix";
+      url = "/home/ari/Documents/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -54,7 +54,7 @@
 	      home-manager.backupFileExtension = "backup";
 	      home-manager.users.${username} = import ./home/home.nix;
 	      home-manager.sharedModules = [
-	        inputs.nixcord.homeManagerModules.nixcord
+                #inputs.nixcord.homeManagerModules.nixcord
 	      ];
 	    }
 	  ];
