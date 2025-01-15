@@ -7,8 +7,9 @@
       ../modules/stylix.nix # Stylix
       ../modules/steam.nix # Steam
       ../modules/fish.nix # Fish
-      ../modules/nvf.nix # NVF (neovim config)
       ../modules/firewall.nix
+      ../modules/audio/pipewire.nix
+      ../modules/mpd.nix
     ];
 
   # Bootloader.
@@ -61,16 +62,11 @@
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   programs.gamemode.enable = true;
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
-
+  services.mullvad-vpn.enable = true;
 
   environment.systemPackages = [
     inputs.zen-browser.packages.${pkgs.system}.default
     pkgs.git
-    pkgs.neovim
     pkgs.base16-schemes
     pkgs.eza
     pkgs.bat
@@ -88,6 +84,8 @@
     pkgs.rustup
     pkgs.gcc
     pkgs.rnnoise-plugin
+    pkgs.mullvad-vpn
+    pkgs.qbittorrent
   ];
   fonts.packages = with pkgs; [
     noto-fonts

@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "I honestly don't know what I am doing...";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -54,7 +54,7 @@
 	      home-manager.backupFileExtension = "backup";
 	      home-manager.users.${username} = import ./home/home.nix;
 	      home-manager.sharedModules = [
-                #inputs.nixcord.homeManagerModules.nixcord
+              inputs.nixcord.homeManagerModules.nixcord
 	      ];
 	    }
 	  ];
