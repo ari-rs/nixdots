@@ -8,6 +8,7 @@
       ../config/mechabar.nix
       ../config/fastfetch.nix
       ../config/helix.nix
+      ../config/ncmpcpp.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;

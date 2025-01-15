@@ -354,10 +354,10 @@
 @define-color main-bg         ${config.lib.stylix.colors.withHashtag.base00};
 @define-color main-br         ${config.lib.stylix.colors.withHashtag.base03};
 
-@define-color active-bg       #9399b2;
+@define-color active-bg       ${config.lib.stylix.colors.withHashtag.base03};
 @define-color active-fg       #11111b;
 
-@define-color hover-bg        #313244;
+@define-color hover-bg        ${config.lib.stylix.colors.withHashtag.base04};
 @define-color hover-fg        rgba(205, 214, 244, 0.75);
 
 @define-color white           #ffffff;
@@ -366,21 +366,21 @@
 /* Module Colors */
 
 @define-color module-fg       ${config.lib.stylix.colors.withHashtag.base05};
-@define-color workspaces      #181825;
+@define-color workspaces      ${config.lib.stylix.colors.withHashtag.base01};
 
-@define-color cpuinfo         #181825;
-@define-color memory          #1e1e2e;
-@define-color cpu             #313244;
+@define-color cpuinfo         ${config.lib.stylix.colors.withHashtag.base01};
+@define-color memory          ${config.lib.stylix.colors.withHashtag.base02};
+@define-color cpu             ${config.lib.stylix.colors.withHashtag.base03};
 @define-color distro-fg       #000000;
-@define-color distro-bg       #9399b2;
-@define-color time            #313244;
-@define-color date            #1e1e2e;
-@define-color tray            #181825;
+@define-color distro-bg       ${config.lib.stylix.colors.withHashtag.base04};
+@define-color time            ${config.lib.stylix.colors.withHashtag.base03};
+@define-color date            ${config.lib.stylix.colors.withHashtag.base02};
+@define-color tray            ${config.lib.stylix.colors.withHashtag.base01}; /* Probably doesnt do anything*/
 
-@define-color pulseaudio      #181825;
-@define-color backlight       #1e1e2e;
-@define-color battery         #313244;
-@define-color power           #9399b2;
+@define-color pulseaudio      ${config.lib.stylix.colors.withHashtag.base01};
+@define-color backlight       ${config.lib.stylix.colors.withHashtag.base02};
+@define-color battery         ${config.lib.stylix.colors.withHashtag.base03};
+@define-color power           ${config.lib.stylix.colors.withHashtag.base02};
 
 /* State Colors */
 

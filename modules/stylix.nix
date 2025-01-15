@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
     image = ../wallpapers/forest-everforest.png;
     cursor.size = 20;
