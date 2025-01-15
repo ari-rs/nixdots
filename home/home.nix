@@ -9,6 +9,7 @@
       ../config/fastfetch.nix
       ../config/helix.nix
       ../config/ncmpcpp.nix
+      ../config/hyprlock.nix
     ];
     programs.btop.enable = true;
     programs.kitty.enable = true;

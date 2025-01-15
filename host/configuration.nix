@@ -103,7 +103,6 @@
     XDG_VIDEOS_DIR = "$HOME/Videos";
   };
 
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;

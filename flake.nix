@@ -54,7 +54,7 @@
 	      home-manager.backupFileExtension = "backup";
 	      home-manager.users.${username} = import ./home/home.nix;
 	      home-manager.sharedModules = [
-              inputs.nixcord.homeManagerModules.nixcord
+          inputs.nixcord.homeManagerModules.nixcord
 	      ];
 	    }
 	  ];
