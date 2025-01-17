@@ -98,7 +98,6 @@
   exec-once = [
     "waybar"
     "dunst"
-    "systemctl --user start hyprpolkitagent"
   ];
       };
     };

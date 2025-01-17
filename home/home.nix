@@ -10,13 +10,14 @@
       ../config/helix.nix
       ../config/ncmpcpp.nix
       ../config/hyprlock.nix
+      ../config/kitty.nix
+      ../config/mpd.nix
+      ../config/mpdris2.nix
     ];
     programs.btop.enable = true;
-    programs.kitty.enable = true;
     programs.yazi.enable = true;
     services.dunst.enable = true;
     programs.fuzzel.enable = true;
-    programs.zed-editor.enable = true;
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
 

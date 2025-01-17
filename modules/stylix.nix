@@ -4,6 +4,9 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+    # ayu-dark
+    # tokyo-night-dark
+    # 
     image = ../wallpapers/forest-everforest.png;
     cursor.size = 20;
     fonts = {
