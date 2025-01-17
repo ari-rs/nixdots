@@ -70,7 +70,6 @@
 
   environment.systemPackages = [
     inputs.zen-browser.packages.${pkgs.system}.default
-    pkgs.git
     pkgs.base16-schemes
     pkgs.eza
     pkgs.bat
@@ -99,6 +98,8 @@
     nerd-fonts.droid-sans-mono
     nerd-fonts.jetbrains-mono
   ];
+
+  
   environment.variables = {
     XDG_DESKTOP_DIR = "$HOME/Desktop";
     XDG_DOCUMENTS_DIR = "$HOME/Documents";

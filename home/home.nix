@@ -18,6 +18,12 @@
     programs.yazi.enable = true;
     services.dunst.enable = true;
     programs.fuzzel.enable = true;
+
+    programs.git = {
+      enable = true;
+      userName = "ari";
+      userEmail = "ari.eimer@proton.me";
+    };
     xdg.userDirs.enable = true;
     xdg.userDirs.createDirectories = true;
 
