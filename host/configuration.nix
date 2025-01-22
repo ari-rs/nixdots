@@ -63,7 +63,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Use CachyOS kernel
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  #boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   programs.gamemode.enable = true;
 
   services.mullvad-vpn.enable = true;
@@ -79,6 +80,7 @@
     pkgs.swappy
     pkgs.wlogout
     pkgs.heroic
+    pkgs.git
     pkgs.lm_sensors
     pkgs.prismlauncher
     pkgs.filezilla
@@ -88,8 +90,15 @@
     pkgs.rnnoise-plugin
     pkgs.mullvad-vpn
     pkgs.qbittorrent
-    pkgs.yt-dlp
     pkgs.spotdl
+    pkgs.lldb
+    pkgs.nixd
+    pkgs.rar
+    pkgs.croc
+    pkgs.ryujinx
+    pkgs.unzip
+    pkgs.swww
+    pkgs.spotify
   ];
   fonts.packages = with pkgs; [
     noto-fonts

@@ -106,8 +106,8 @@
             "20" = "10";
           };
           persistent-workspaces = {
-            "DP-1" = [ 1 2 3 4 5];
-            "HDMI-A-1" = [ 11 12 13 14 15];
+           # "DP-1" = [ 1 2 3 4 5];
+           # "HDMI-A-1" = [ 11 12 13 14 15];
           };
         };
         "hyprland/window" = {
@@ -146,7 +146,7 @@
             max-length = 7;
         };
         "custom/cpu" = {
-          exec = "~/nixos/scripts/waybar/cpu-usage.sh";
+          exec = "~/nixos/resources/waybar/cpu-usage.sh";
           return-type = "json";
           tooltip = "true";
           interval = 5;
@@ -189,7 +189,7 @@
         max-length = 8;
         };
         "custom/wifi" = {
-          exec = "~/nixos/scripts/waybar/wifi-status.sh";
+          exec = "~/nixos/resources/waybar/wifi-status.sh";
           return-type = "json";
           format = "{}";
           tooltip = "true";

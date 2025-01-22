@@ -7,8 +7,9 @@
 	      "$launcher" = "fuzzel";
 	      "$mod" = "super";
         "input:sensitivity" = "-2";
+#        "input:kb_options" = "caps:swapescape";
 	env = [
-         # "NIXOS_OZONE_WL,1" # Electron + Wayland is broken
+         # "NIXOS_OZONE_WL,1" # (discord)Electron + Wayland is broken
 	  "__GLX_VENDOR_LIBRARY_NAME,nvidia"
 	  "GBM_BACKEND,nvidia-drm"
 	  "XDG_CURRENT_DESKTOP,Hyprland"
@@ -20,6 +21,15 @@
 	  "QT_QPA_PLATFORM,wayland"
 	  "QT_WAYLAND_DISABLE_WINDOWDECORATION"
 	];
+  decoration = {
+    "rounding" = 2;
+    "active_opacity" = 0.97;
+    "inactive_opacity" = 0.93;
+  };
+  windowrulev2 = [
+    "opaque, class:^(.*Minecraft.*)$"
+    "opaque, class:^(.*zen.*)$"
+  ];
   layerrule = [
     "noanim, selection"
   ];
@@ -60,8 +70,9 @@
 	  "$mod SHIFT, 9, movetoworkspace, r~9"
 	  "$mod SHIFT, 0, movetoworkspace, r~10"
     "$mod, O, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle" # Mute bind
-    "CTRL, ESCAPE, exec, hyprshot -m region" # Screenshot bind
-    "SUPER, ESCAPE, exec, wlogout" # Logout Menu
+    "$mod, L, exec, hyprlock"
+    "CTRL, ESCAPE, exec, hyprshot -m region" # Screenshot bind # should be replaced with a rofi run mode
+    #"SUPER, ESCAPE, exec, wlogout" # Logout Menu # wloutout sucks and should be replaced by a rofi run mode
     "SUPER, A, togglefloating"
     ", F11, fullscreen"
 	];
@@ -98,6 +109,7 @@
   exec-once = [
     "waybar"
     "dunst"
+    "swww-daemon"
   ];
       };
     };

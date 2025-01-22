@@ -5,10 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nixcord.url = "github:kaylorben/nixcord";
-    nvf.url = "github:notashelf/nvf";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix = {
-      url = "github:danth/stylix/master";
-      #url = "/home/ari/Documents/stylix";
+      #url = "github:danth/stylix/master";
+      url = "/home/ari/Documents/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -22,7 +25,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, chaotic, stylix, nvf, ... }@inputs:
+  outputs = { nixpkgs, home-manager, chaotic, stylix, ... }@inputs:
     let
     system = "x86_64-linux";
 	  host = "hydrogen";
@@ -41,7 +44,6 @@
 	    ./host/configuration.nix
 	    chaotic.nixosModules.default
 	    stylix.nixosModules.stylix
-	    nvf.nixosModules.default
 	    home-manager.nixosModules.home-manager
 	    {
               home-manager.extraSpecialArgs = {
@@ -55,6 +57,7 @@
 	      home-manager.users.${username} = import ./home/home.nix;
 	      home-manager.sharedModules = [
           inputs.nixcord.homeManagerModules.nixcord
+          inputs.spicetify-nix.homeManagerModules.default
 	      ];
 	    }
 	  ];

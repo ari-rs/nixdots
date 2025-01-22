@@ -2,7 +2,8 @@
   programs.kitty = {
     enable = true;
     settings = {
-      confirm_os_windowclose = 0;
+      confirm_os_window_close = 0;
+      enable_audio_bell = false;
      };
   };
 }
