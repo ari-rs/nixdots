@@ -3,6 +3,7 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
+      set EDITOR hx
       zoxide init --no-cmd fish | source
 
       if status is-login

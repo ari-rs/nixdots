@@ -12,6 +12,7 @@
       ../config/kitty.nix
       ../config/rofi.nix
       ../config/spicetify.nix
+      ../config/xdg.nix
     ];
     programs.btop.enable = true;
     programs.yazi.enable = true;
@@ -24,8 +25,6 @@
       userName = "ari";
       userEmail = "ari.eimer@proton.me";
     };
-    xdg.userDirs.enable = true;
-    xdg.userDirs.createDirectories = true;
 
     systemd.user.tmpfiles.rules = [
       "L /home/ari/HDrive - - - - /mnt/HDrive"

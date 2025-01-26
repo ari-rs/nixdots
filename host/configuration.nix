@@ -98,6 +98,9 @@
     pkgs.spotify
     pkgs.nvtopPackages.nvidia
     pkgs.suyu
+    pkgs.loupe
+    pkgs.amberol
+    pkgs.celluloid
   ];
   fonts.packages = with pkgs; [
     noto-fonts
