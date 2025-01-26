@@ -7,7 +7,7 @@
     # ayu-dark
     # tokyo-night-dark
     # 
-    image = ../wallpapers/forest-everforest.png;
+    image = ../wallpapers/bluepink.png;
     cursor.size = 20;
     fonts = {
       monospace.package = pkgs.nerd-fonts.jetbrains-mono;

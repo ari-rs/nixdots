@@ -109,7 +109,6 @@
   exec-once = [
     "waybar"
     "dunst"
-    "swww-daemon"
   ];
       };
     };

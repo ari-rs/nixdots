@@ -95,7 +95,6 @@
     pkgs.rar
     pkgs.croc
     pkgs.unzip
-    pkgs.swww
     pkgs.spotify
     pkgs.nvtopPackages.nvidia
     pkgs.suyu

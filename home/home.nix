@@ -8,11 +8,8 @@
       ../config/mechabar.nix
       ../config/fastfetch.nix
       ../config/helix.nix
-     # ../config/ncmpcpp.nix
       ../config/hyprlock.nix
       ../config/kitty.nix
-     # ../config/mpd.nix
-     # ../config/mpdris2.nix
       ../config/rofi.nix
       ../config/spicetify.nix
     ];
@@ -20,7 +17,6 @@
     programs.yazi.enable = true;
     services.dunst.enable = true;
     programs.fuzzel.enable = true;
-    stylix.targets.hyprland.hyprpaper.enable = false;
     stylix.targets.rofi.enable = false;
 
     programs.git = {
