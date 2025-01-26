@@ -25,43 +25,52 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, chaotic, stylix, ... }@inputs:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      chaotic,
+      stylix,
+      self,
+      ...
+    }@inputs:
     let
-    system = "x86_64-linux";
-	  host = "hydrogen";
-	  username = "ari";
+      system = "x86_64-linux";
+      host = "hydrogen";
+      username = "ari";
     in
     {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
       nixosConfigurations = {
-        "${host}" = nixpkgs.lib.nixosSystem { 
+        "${host}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
-      inherit system;
-	    inherit inputs;
-	    inherit username;
-	    inherit host;
-	  };
+            inherit system;
+            inherit inputs;
+            inherit username;
+            inherit host;
+          };
           modules = [
-	    ./host/configuration.nix
-	    chaotic.nixosModules.default
-	    stylix.nixosModules.stylix
-	    home-manager.nixosModules.home-manager
-	    {
+            ./host/configuration.nix
+            chaotic.nixosModules.default
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
               home-manager.extraSpecialArgs = {
                 inherit username;
-	        inherit inputs;
-	        inherit host;
-	      };
-	      home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
-	      home-manager.backupFileExtension = "backup";
-	      home-manager.users.${username} = import ./home/home.nix;
-	      home-manager.sharedModules = [
-          inputs.nixcord.homeManagerModules.nixcord
-          inputs.spicetify-nix.homeManagerModules.default
-	      ];
-	    }
-	  ];
-	};
+                inherit inputs;
+                inherit host;
+              };
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.${username} = import ./home/home.nix;
+              home-manager.sharedModules = [
+                inputs.nixcord.homeManagerModules.nixcord
+                inputs.spicetify-nix.homeManagerModules.default
+              ];
+            }
+          ];
+        };
       };
     };
 }

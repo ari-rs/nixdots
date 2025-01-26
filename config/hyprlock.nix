@@ -1,7 +1,9 @@
+{ lib, ... }:
 {
   programs.hyprlock = {
     enable = true;
     settings = {
+      background.path = lib.mkForce "~/nixos/wallpapers/forest-everforest.png";
       general = {
         hide_cursor = true;
         disable_loading_bar = true;

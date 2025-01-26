@@ -1,15 +1,14 @@
 { pkgs, inputs, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix # Include the results of the hardware scan.
-      ../modules/nvidia.nix # Nvidia Drivers
-      ../modules/stylix.nix # Stylix
-      ../modules/steam.nix # Steam
-      ../modules/fish.nix # Fish
-      ../modules/firewall.nix
-      ../modules/audio/pipewire.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix # Include the results of the hardware scan.
+    ../modules/nvidia.nix # Nvidia Drivers
+    ../modules/stylix.nix # Stylix
+    ../modules/steam.nix # Steam
+    ../modules/fish.nix # Fish
+    ../modules/firewall.nix
+    ../modules/audio/pipewire.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -42,7 +41,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # X11 keymap
   services.xserver.xkb = {
     layout = "us";
@@ -52,7 +51,10 @@
   users.users.ari = {
     isNormalUser = true;
     description = "ari";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     #packages = with pkgs; [];
   };
 
@@ -60,8 +62,11 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # Use CachyOS kernel
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   programs.gamemode.enable = true;
@@ -101,6 +106,8 @@
     pkgs.loupe
     pkgs.amberol
     pkgs.celluloid
+    pkgs._7zz-rar
+    pkgs.p7zip-rar
   ];
   fonts.packages = with pkgs; [
     noto-fonts
@@ -110,12 +117,11 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  
   environment.variables = {
     XDG_DESKTOP_DIR = "$HOME/Desktop";
     XDG_DOCUMENTS_DIR = "$HOME/Documents";
     XDG_DOWNLOAD_DIR = "$HOME/Downloads";
-    XDG_MUSIC_DIR =" $HOME/Music";
+    XDG_MUSIC_DIR = " $HOME/Music";
     XDG_PICTURES_DIR = "$HOME/Pictures";
     XDG_VIDEOS_DIR = "$HOME/Videos";
   };

@@ -6,7 +6,7 @@
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
     # ayu-dark
     # tokyo-night-dark
-    # 
+    #
     image = ../wallpapers/bluepink.png;
     cursor.size = 20;
     fonts = {

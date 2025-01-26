@@ -23,8 +23,8 @@
         padding = "0px";
         border = "0px solid";
         border-radius = "12px";
-       # border-color = "@selected";
-       # background-color = "@background";
+        # border-color = "@selected";
+        # background-color = "@background";
         cursor = "default";
       };
       mainbox = {
@@ -34,30 +34,33 @@
         padding = "15px";
         border = "0px solid";
         border-radius = "12px";
-       # border-color = "@selected";
-       # background-color = "@background-alt";
-       # text-color = "@foreground";
-        children = [ "prompt" "entry"];
+        # border-color = "@selected";
+        # background-color = "@background-alt";
+        # text-color = "@foreground";
+        children = [
+          "prompt"
+          "entry"
+        ];
       };
       prompt = {
         enabled = true;
-       # background-color = "inherit";
-       # text-color = "inherit";
+        # background-color = "inherit";
+        # text-color = "inherit";
       };
       textbox-prompt-colon = {
         enabled = true;
         expand = false;
         str = "::";
-       # background-color = "inherit";
-       # text-color = "inherit";
+        # background-color = "inherit";
+        # text-color = "inherit";
       };
       entry = {
         enabled = true;
-       # background = "inherit";
-       # text-color = "inherit";
+        # background = "inherit";
+        # text-color = "inherit";
         cursor = "text";
         placeholder = "Search...";
-       # placeholder-color = "inherit";
+        # placeholder-color = "inherit";
       };
       listview = {
         enabled = true;
@@ -75,16 +78,16 @@
         padding = "0px";
         border = "0px solid";
         border-radius = "0px";
-       # border-color = "@selected";
-       # background-color = "transparent";
-       # text-color = "@foreground";
+        # border-color = "@selected";
+        # background-color = "transparent";
+        # text-color = "@foreground";
         cursor = "default";
       };
       scrollbar = {
         handle-width = "5px";
-       # handle-color = "@selected";
+        # handle-color = "@selected";
         border-radius = "0px";
-       # background-color = "@background-alt";
+        # background-color = "@background-alt";
       };
       element = {
         enabled = true;
@@ -93,32 +96,32 @@
         padding = "5px";
         border = "0px solid";
         border-radius = "12px";
-       # border-color = "@selected";
-       # background-color = "transparent";
-       # text-color = "@foreground";
-       # cursor = "pointer";
+        # border-color = "@selected";
+        # background-color = "transparent";
+        # text-color = "@foreground";
+        # cursor = "pointer";
       };
       "element normal.normal" = {
-       # background-color = "@backgroud";
-       # text-color = "@foreground";
+        # background-color = "@backgroud";
+        # text-color = "@foreground";
       };
       "element selected.normal" = {
-       # background-color = "@selected";
-       # text-color = "@background";
+        # background-color = "@selected";
+        # text-color = "@background";
       };
       element-icon = {
-       # background-color = "transparent";
-       # text-color = "inherit";
+        # background-color = "transparent";
+        # text-color = "inherit";
         size = "32px";
-       # cursor = "inherit";
+        # cursor = "inherit";
       };
       element-text = {
-       # background-color = "transparent";
-       # text-color = "inherit";
-       # highlight = "inherit";
-       # cursor = "inherit";
+        # background-color = "transparent";
+        # text-color = "inherit";
+        # highlight = "inherit";
+        # cursor = "inherit";
         vertical-align = "0.5";
-        horizontal-align =  "0.0";
+        horizontal-align = "0.0";
       };
       textbox = {
         vertical-align = "0.5";

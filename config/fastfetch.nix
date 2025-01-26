@@ -2,7 +2,7 @@
   programs.fastfetch = {
     enable = true;
     settings = {
-      display  = {
+      display = {
         separator = " ➜ ";
         color = "white";
       };
@@ -33,7 +33,7 @@
           keyColor = "green";
         }
         {
-          type = "display"; 
+          type = "display";
           key = "  󰍹 Display";
           keyColor = "cyan";
           compact = "original";

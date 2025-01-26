@@ -1,5 +1,5 @@
 { pkgs, ... }:
-let 
+let
   pw_rnnoise_config = {
     "context.modules" = [
       {
@@ -38,6 +38,7 @@ let
       }
     ];
   };
-in {
-     services.pipewire.extraConfig.pipewire."99-input-denoising" = pw_rnnoise_config;
-   }
+in
+{
+  services.pipewire.extraConfig.pipewire."99-input-denoising" = pw_rnnoise_config;
+}

@@ -10,9 +10,12 @@
         height = 24;
         mode = "dock";
         gtk-layer-shell = true;
-        output = [ "DP-1" "HDMI-A-1" ];
-        modules-left = [ 
-          "custom/ws" 
+        output = [
+          "DP-1"
+          "HDMI-A-1"
+        ];
+        modules-left = [
+          "custom/ws"
           "custom/left1"
 
           "hyprland/workspaces"
@@ -106,8 +109,8 @@
             "20" = "10";
           };
           persistent-workspaces = {
-           # "DP-1" = [ 1 2 3 4 5];
-           # "HDMI-A-1" = [ 11 12 13 14 15];
+            # "DP-1" = [ 1 2 3 4 5];
+            # "HDMI-A-1" = [ 11 12 13 14 15];
           };
         };
         "hyprland/window" = {
@@ -124,13 +127,13 @@
           };
         };
         "custom/cpuinfo" = {
-            exec = "~/nixos/scripts/waybar/cpu-temp.sh";
-            return-type = "json";
-            format = "{}";
-            tooltip = "true";
-            interval = 5;
-            min-length = 8;
-            max-length = 8;
+          exec = "~/nixos/scripts/waybar/cpu-temp.sh";
+          return-type = "json";
+          format = "{}";
+          tooltip = "true";
+          interval = 5;
+          min-length = 8;
+          max-length = 8;
         };
         "memory" = {
           states = {
@@ -138,12 +141,12 @@
             critical = 90;
           };
           format = "󰘚 {percentage}%";
-            format-critical = "󰀦 {percentage}%";
-            tooltip = "true";
-            tooltip-format = "Memory Used: {used:0.1f} GB / {total:0.1f} GB";
-            interval = 6;
-            min-length = 7;
-            max-length = 7;
+          format-critical = "󰀦 {percentage}%";
+          tooltip = "true";
+          tooltip-format = "Memory Used: {used:0.1f} GB / {total:0.1f} GB";
+          interval = 6;
+          min-length = 7;
+          max-length = 7;
         };
         "custom/cpu" = {
           exec = "~/nixos/resources/waybar/cpu-usage.sh";
@@ -185,8 +188,8 @@
               on-click-right = "mode";
             };
           };
-        min-length = 8;
-        max-length = 8;
+          min-length = 8;
+          max-length = 8;
         };
         "custom/wifi" = {
           exec = "~/nixos/resources/waybar/wifi-status.sh";
@@ -227,7 +230,11 @@
           format = "{icon} {volume}%";
           format-muted = "󰝟 {volume}%";
           format-icons = {
-            default = ["󰕿" "󰖀" "󰕾"];
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
             headphone = "󰋋";
             headset = "󰋋";
           };
@@ -247,7 +254,15 @@
         };
         "battery" = {
           format = "{icon} {capacity}%";
-          format-icons = ["󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂"];
+          format-icons = [
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+          ];
           format-full = "󱃌 {capacity}%";
           format-warning = "󰁻 {capacity}%";
           format-critical = "󱃍 {capacity}%";
@@ -300,12 +315,12 @@
           tooltip = "false";
         };
         "custom/left8" = {
-           format = "";
-           tooltip = "false";
+          format = "";
+          tooltip = "false";
         };
         "custom/right1" = {
-           format = "";
-           tooltip = "false";
+          format = "";
+          tooltip = "false";
         };
         "custom/right2" = {
           format = "";
@@ -316,8 +331,8 @@
           tooltip = "false";
         };
         "custom/right4" = {
-           format = "";
-           tooltip = "false";
+          format = "";
+          tooltip = "false";
         };
         "custom/right5" = {
           format = "";
@@ -339,412 +354,412 @@
     };
     style = ''
 
-* {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  font-size: 10px;
-  min-height: 0;
-  padding: 0;
-  border: none;
-  margin: 0;
-}
+      * {
+        font-family: "JetBrainsMono Nerd Font";
+        font-weight: bold;
+        font-size: 10px;
+        min-height: 0;
+        padding: 0;
+        border: none;
+        margin: 0;
+      }
 
-/* === theme.css === */ 
-@define-color main-fg         ${config.lib.stylix.colors.withHashtag.base01}; 
-@define-color main-bg         ${config.lib.stylix.colors.withHashtag.base00};
-@define-color main-br         ${config.lib.stylix.colors.withHashtag.base03};
+      /* === theme.css === */ 
+      @define-color main-fg         ${config.lib.stylix.colors.withHashtag.base01}; 
+      @define-color main-bg         ${config.lib.stylix.colors.withHashtag.base00};
+      @define-color main-br         ${config.lib.stylix.colors.withHashtag.base03};
 
-@define-color active-bg       ${config.lib.stylix.colors.withHashtag.base03};
-@define-color active-fg       #11111b;
+      @define-color active-bg       ${config.lib.stylix.colors.withHashtag.base03};
+      @define-color active-fg       #11111b;
 
-@define-color hover-bg        ${config.lib.stylix.colors.withHashtag.base04};
-@define-color hover-fg        rgba(205, 214, 244, 0.75);
+      @define-color hover-bg        ${config.lib.stylix.colors.withHashtag.base04};
+      @define-color hover-fg        rgba(205, 214, 244, 0.75);
 
-@define-color white           #ffffff;
-@define-color black           #000000;
+      @define-color white           #ffffff;
+      @define-color black           #000000;
 
-/* Module Colors */
+      /* Module Colors */
 
-@define-color module-fg       ${config.lib.stylix.colors.withHashtag.base05};
-@define-color workspaces      ${config.lib.stylix.colors.withHashtag.base01};
+      @define-color module-fg       ${config.lib.stylix.colors.withHashtag.base05};
+      @define-color workspaces      ${config.lib.stylix.colors.withHashtag.base01};
 
-@define-color cpuinfo         ${config.lib.stylix.colors.withHashtag.base01};
-@define-color memory          ${config.lib.stylix.colors.withHashtag.base02};
-@define-color cpu             ${config.lib.stylix.colors.withHashtag.base03};
-@define-color distro-fg       #000000;
-@define-color distro-bg       ${config.lib.stylix.colors.withHashtag.base04};
-@define-color time            ${config.lib.stylix.colors.withHashtag.base03};
-@define-color date            ${config.lib.stylix.colors.withHashtag.base02};
-@define-color tray            ${config.lib.stylix.colors.withHashtag.base01}; /* Probably doesnt do anything*/
+      @define-color cpuinfo         ${config.lib.stylix.colors.withHashtag.base01};
+      @define-color memory          ${config.lib.stylix.colors.withHashtag.base02};
+      @define-color cpu             ${config.lib.stylix.colors.withHashtag.base03};
+      @define-color distro-fg       #000000;
+      @define-color distro-bg       ${config.lib.stylix.colors.withHashtag.base04};
+      @define-color time            ${config.lib.stylix.colors.withHashtag.base03};
+      @define-color date            ${config.lib.stylix.colors.withHashtag.base02};
+      @define-color tray            ${config.lib.stylix.colors.withHashtag.base01}; /* Probably doesnt do anything*/
 
-@define-color pulseaudio      ${config.lib.stylix.colors.withHashtag.base01};
-@define-color backlight       ${config.lib.stylix.colors.withHashtag.base02};
-@define-color battery         ${config.lib.stylix.colors.withHashtag.base03};
-@define-color power           ${config.lib.stylix.colors.withHashtag.base02};
+      @define-color pulseaudio      ${config.lib.stylix.colors.withHashtag.base01};
+      @define-color backlight       ${config.lib.stylix.colors.withHashtag.base02};
+      @define-color battery         ${config.lib.stylix.colors.withHashtag.base03};
+      @define-color power           ${config.lib.stylix.colors.withHashtag.base02};
 
-/* State Colors */
+      /* State Colors */
 
-@define-color good            #f5e0dc;
-@define-color warning         ${config.lib.stylix.colors.withHashtag.base0A};
-@define-color critical        ${config.lib.stylix.colors.withHashtag.base08};
-@define-color full            #a6e3a1;
-@define-color charging        #cdd6f4;
-/* === Main Background === */
+      @define-color good            #f5e0dc;
+      @define-color warning         ${config.lib.stylix.colors.withHashtag.base0A};
+      @define-color critical        ${config.lib.stylix.colors.withHashtag.base08};
+      @define-color full            #a6e3a1;
+      @define-color charging        #cdd6f4;
+      /* === Main Background === */
 
-window#waybar {
-  background: @main-bg;
-}
+      window#waybar {
+        background: @main-bg;
+      }
 
-/* === Drop Shadow === */
+      /* === Drop Shadow === */
 
-window#waybar > box {
-  background-color: transparent;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
-  margin: 2px;
-}
+      window#waybar > box {
+        background-color: transparent;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
+        margin: 2px;
+      }
 
-/* === Tooltip === */
+      /* === Tooltip === */
 
-tooltip {
-  background: @main-bg;
-  border: solid;
-  border-width: 1.5px;
-  border-radius: 8px;
-  border-color: @main-br;
-}
-tooltip label {
-  color: @main-fg;
-  font-weight: normal;
-  margin: -1.5px 3px;
-}
+      tooltip {
+        background: @main-bg;
+        border: solid;
+        border-width: 1.5px;
+        border-radius: 8px;
+        border-color: @main-br;
+      }
+      tooltip label {
+        color: @main-fg;
+        font-weight: normal;
+        margin: -1.5px 3px;
+      }
 
-/* === Workspace Buttons === */
+      /* === Workspace Buttons === */
 
-#workspaces button {
-  color: @module-fg;
-  border-radius: 8px;
-  box-shadow: none;
-  margin: 2px 0;
-  padding: 0 2px;
-  transition: none;
-}
-#workspaces button:hover {
-  color: @hover-fg;
-  background: @hover-bg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#workspaces button.active {
-  color: @active-fg;
-  background: @active-bg;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-  margin: 2px;
-  padding: 0 6px;
-}
+      #workspaces button {
+        color: @module-fg;
+        border-radius: 8px;
+        box-shadow: none;
+        margin: 2px 0;
+        padding: 0 2px;
+        transition: none;
+      }
+      #workspaces button:hover {
+        color: @hover-fg;
+        background: @hover-bg;
+        text-shadow: none;
+        box-shadow: none;
+      }
+      #workspaces button.active {
+        color: @active-fg;
+        background: @active-bg;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+        margin: 2px;
+        padding: 0 6px;
+      }
 
-/* === General === */
+      /* === General === */
 
-#custom-ws,
-#workspaces,
-#window,
-#custom-cpuinfo,
-#memory,
-#custom-cpu,
-#clock,
-#custom-wifi,
-#bluetooth,
-#custom-update,
-#custom-media,
-#pulseaudio,
-#custom-backlight,
-#battery,
-#custom-power {
-  opacity: 1;
-  color: @module-fg;
-  margin-bottom: 0;
-  padding: 0 4px;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
+      #custom-ws,
+      #workspaces,
+      #window,
+      #custom-cpuinfo,
+      #memory,
+      #custom-cpu,
+      #clock,
+      #custom-wifi,
+      #bluetooth,
+      #custom-update,
+      #custom-media,
+      #pulseaudio,
+      #custom-backlight,
+      #battery,
+      #custom-power {
+        opacity: 1;
+        color: @module-fg;
+        margin-bottom: 0;
+        padding: 0 4px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+      }
 
-#custom-left1,
-#custom-left2,
-#custom-left3,
-#custom-left4,
-#custom-left5,
-#custom-left6,
-#custom-left7,
-#custom-left8 {
-  font-size: 11pt;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
-}
+      #custom-left1,
+      #custom-left2,
+      #custom-left3,
+      #custom-left4,
+      #custom-left5,
+      #custom-left6,
+      #custom-left7,
+      #custom-left8 {
+        font-size: 11pt;
+        text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+      }
 
-#custom-right1,
-#custom-right2,
-#custom-right3,
-#custom-right4,
-#custom-right5 {
-  font-size: 11pt;
-  padding-right: 3px;
-  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
-}
+      #custom-right1,
+      #custom-right2,
+      #custom-right3,
+      #custom-right4,
+      #custom-right5 {
+        font-size: 11pt;
+        padding-right: 3px;
+        text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+      }
 
-/* === Modules === */
+      /* === Modules === */
 
-/* == Window Icon == */
+      /* == Window Icon == */
 
-#custom-ws {
-  background: @main-bg;
-}
+      #custom-ws {
+        background: @main-bg;
+      }
 
-/* == Workspaces == */
+      /* == Workspaces == */
 
-#custom-left1 {
-  color: @workspaces;
-  background: @main-bg;
-  padding-left: 2px;
-}
-#workspaces {
-  background: @workspaces;
-}
-#custom-right1 {
-  color: @workspaces;
-  background: @main-bg;
-  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
-}
+      #custom-left1 {
+        color: @workspaces;
+        background: @main-bg;
+        padding-left: 2px;
+      }
+      #workspaces {
+        background: @workspaces;
+      }
+      #custom-right1 {
+        color: @workspaces;
+        background: @main-bg;
+        text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
+      }
 
-/* == Temperature == */
+      /* == Temperature == */
 
-#custom-paddc {
-  padding-right: 22px;
-}
-#custom-left2 {
-  color: @cpuinfo;
-  background: @main-bg;
-  padding-left: 3px;
-}
-#custom-cpuinfo {
-  background: @cpuinfo;
-  padding-left: 1px;
-  padding-right: 0;
-}
+      #custom-paddc {
+        padding-right: 22px;
+      }
+      #custom-left2 {
+        color: @cpuinfo;
+        background: @main-bg;
+        padding-left: 3px;
+      }
+      #custom-cpuinfo {
+        background: @cpuinfo;
+        padding-left: 1px;
+        padding-right: 0;
+      }
 
-/* == Memory == */
+      /* == Memory == */
 
-#custom-left3 {
-  color: @memory;
-  background: @cpuinfo;
-  padding-left: 3px;
-}
-#memory {
-  background: @memory;
-  padding-left: 1px;
-  padding-right: 0;
-}
-#memory.warning {
-  color: @warning;
-}
-#memory.critical {
-  color: @critical;
-}
+      #custom-left3 {
+        color: @memory;
+        background: @cpuinfo;
+        padding-left: 3px;
+      }
+      #memory {
+        background: @memory;
+        padding-left: 1px;
+        padding-right: 0;
+      }
+      #memory.warning {
+        color: @warning;
+      }
+      #memory.critical {
+        color: @critical;
+      }
 
-/* == CPU == */
+      /* == CPU == */
 
-#custom-left4 {
-  color: @cpu;
-  background: @memory;
-  padding-left: 3px;
-}
-#custom-cpu {
-  background: @cpu;
-}
-#custom-leftin1 {
-  color: @cpu;
-  font-size: 12.2pt;
-  margin-bottom: -2px;
-}
+      #custom-left4 {
+        color: @cpu;
+        background: @memory;
+        padding-left: 3px;
+      }
+      #custom-cpu {
+        background: @cpu;
+      }
+      #custom-leftin1 {
+        color: @cpu;
+        font-size: 12.2pt;
+        margin-bottom: -2px;
+      }
 
-/* == Distro Icon == */
+      /* == Distro Icon == */
 
-#custom-left5 {
-  color: @distro-bg;
-  background: @main-bg;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
-  padding-left: 3px;
-}
-#idle_inhibitor {
-  color: @distro-fg;
-  background: @distro-bg;
-  font-size: 11pt;
-  margin-right: -1px;
-  margin-bottom: -2px;
-  padding-right: 0;
-  padding-left: 3px;
-  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
-}
-#custom-right2 {
-  color: @distro-bg;
-  background: @main-bg;
-}
+      #custom-left5 {
+        color: @distro-bg;
+        background: @main-bg;
+        text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
+        padding-left: 3px;
+      }
+      #idle_inhibitor {
+        color: @distro-fg;
+        background: @distro-bg;
+        font-size: 11pt;
+        margin-right: -1px;
+        margin-bottom: -2px;
+        padding-right: 0;
+        padding-left: 3px;
+        text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+      }
+      #custom-right2 {
+        color: @distro-bg;
+        background: @main-bg;
+      }
 
-/* == Time == */
+      /* == Time == */
 
-#custom-rightin1 {
-  color: @time;
-  font-size: 12.2pt;
-  margin-bottom: -2px;
-}
-#clock.time {
-  background: @time;
-}
-#custom-right3 {
-  color: @time;
-  background: @date;
-}
+      #custom-rightin1 {
+        color: @time;
+        font-size: 12.2pt;
+        margin-bottom: -2px;
+      }
+      #clock.time {
+        background: @time;
+      }
+      #custom-right3 {
+        color: @time;
+        background: @date;
+      }
 
-/* == Date == */
+      /* == Date == */
 
-#clock.date {
-  background: @date;
-}
-#clock.date:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#custom-right4 {
-  color: @date;
-  background: @tray;
-}
+      #clock.date {
+        background: @date;
+      }
+      #clock.date:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
+      #custom-right4 {
+        color: @date;
+        background: @tray;
+      }
 
-/* == Tray == */
+      /* == Tray == */
 
-#custom-wifi {
-  padding-left: 5px;
-  padding-right: 8px;
-  background: @tray;
-}
-#custom-wifi:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
+      #custom-wifi {
+        padding-left: 5px;
+        padding-right: 8px;
+        background: @tray;
+      }
+      #custom-wifi:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
 
-#bluetooth {
-  padding-right: 5px;
-  background: @tray;
-}
-#bluetooth:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
+      #bluetooth {
+        padding-right: 5px;
+        background: @tray;
+      }
+      #bluetooth:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
 
-#custom-update {
-  padding-right: 8px;
-  background: @tray;
-}
-#custom-update:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#custom-right5 {
-  color: @tray;
-  background: @main-bg;
-}
+      #custom-update {
+        padding-right: 8px;
+        background: @tray;
+      }
+      #custom-update:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
+      #custom-right5 {
+        color: @tray;
+        background: @main-bg;
+      }
 
-/* == Media Info == */
+      /* == Media Info == */
 
-#custom-media {
-  font-weight: normal;
-  background-color: @main-bg;
-  padding-right: 8px;
-  padding-left: 8px;
-}
-#custom-media:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
+      #custom-media {
+        font-weight: normal;
+        background-color: @main-bg;
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+      #custom-media:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
 
-/* == Output Device == */
+      /* == Output Device == */
 
-#custom-left6 {
-  color: @pulseaudio;
-  background: @main-bg;
-  padding-left: 3px;
-}
-#pulseaudio {
-  background: @pulseaudio;
-}
-#pulseaudio:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
+      #custom-left6 {
+        color: @pulseaudio;
+        background: @main-bg;
+        padding-left: 3px;
+      }
+      #pulseaudio {
+        background: @pulseaudio;
+      }
+      #pulseaudio:hover {
+        color: @hover-fg;
+        text-shadow: none;
+        box-shadow: none;
+      }
 
-/* == Brightness == */
+      /* == Brightness == */
 
-#custom-left7 {
-  color: @backlight;
-  background: @pulseaudio;
-  padding-left: 2px;
-}
-#custom-backlight {
-  background: @backlight;
-}
+      #custom-left7 {
+        color: @backlight;
+        background: @pulseaudio;
+        padding-left: 2px;
+      }
+      #custom-backlight {
+        background: @backlight;
+      }
 
-/* == Battery == */
+      /* == Battery == */
 
-#custom-left8 {
-  color: @battery;
-  background: @backlight;
-  padding-left: 2px;
-}
-#battery {
-  background: @battery;
-}
-#battery.full {
-  color: @full;
-}
-#battery.good {
-  color: @module-fg;
-}
-#battery.warning {
-  color: @warning;
-}
-#battery.critical {
-  color: @critical;
-}
-#battery.charging {
-  color: @charging;
-}
+      #custom-left8 {
+        color: @battery;
+        background: @backlight;
+        padding-left: 2px;
+      }
+      #battery {
+        background: @battery;
+      }
+      #battery.full {
+        color: @full;
+      }
+      #battery.good {
+        color: @module-fg;
+      }
+      #battery.warning {
+        color: @warning;
+      }
+      #battery.critical {
+        color: @critical;
+      }
+      #battery.charging {
+        color: @charging;
+      }
 
-/* == Power Button == */
+      /* == Power Button == */
 
-#custom-leftin2 {
-  color: @battery;
-  background: @main-bg;
-  font-size: 12.2pt;
-  margin-bottom: -2px;
-}
-#custom-power {
-  color: @main-bg;
-  background: @power;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  margin: 2px 4px 2px 0;
-  padding-right: 6px;
-  padding-left: 9px;
-}
-#custom-power:hover {
-  color: @hover-fg;
-  background: @hover-bg;
-  text-shadow: none;
-  box-shadow: none;
-}
-      '';
+      #custom-leftin2 {
+        color: @battery;
+        background: @main-bg;
+        font-size: 12.2pt;
+        margin-bottom: -2px;
+      }
+      #custom-power {
+        color: @main-bg;
+        background: @power;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+        box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        margin: 2px 4px 2px 0;
+        padding-right: 6px;
+        padding-left: 9px;
+      }
+      #custom-power:hover {
+        color: @hover-fg;
+        background: @hover-bg;
+        text-shadow: none;
+        box-shadow: none;
+      }
+    '';
   };
 }
