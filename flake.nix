@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nixcord.url = "github:kaylorben/nixcord";
+    #wallpaper = {
+    #  url = "git+file:///~/nixos/wallpapers?submodules=1";
+    #  flake = false;
+    #};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
