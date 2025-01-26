@@ -1,4 +1,0 @@
-[submodule "wallpapers"]
-  path = wallpapers
-  url = git@github.com:ari-rs/wallpapers.git
-  branch = master
