@@ -1,2 +1,5 @@
-## Very much in progress
-NixOS + Homemanager + Stylix
+# NixOS
+
+- Homemanager
+- Stylix
+- Hyprland

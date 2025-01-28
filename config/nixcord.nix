@@ -1,9 +1,6 @@
-{ pkgs, ... }:
 {
   programs.nixcord = {
     enable = true;
-    discord.vencord.package = pkgs.vencord; # Broken builds without even though
-    # It should only be needed on stables
     quickCss = ''
       /* Hides Store and Shop button */
       [href="/store"], 

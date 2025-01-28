@@ -70,6 +70,7 @@ in
       createDirectories = true;
       templates = null;
       publicShare = null;
+      desktop = null;
     };
   };
 }

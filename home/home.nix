@@ -13,6 +13,7 @@
     ../config/rofi.nix
     ../config/spicetify.nix
     ../config/xdg.nix
+    ../config/tmux.nix
     ../config/yazi.nix
   ];
   programs.btop.enable = true;
