@@ -7,7 +7,7 @@
     # ayu-dark
     # tokyo-night-dark
     #
-    image = ../wallpapers/bluepink.png;
+    image = ../wallpapers/42.png;
     cursor.size = 20;
     fonts = {
       monospace.package = pkgs.nerd-fonts.jetbrains-mono;

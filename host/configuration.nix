@@ -76,7 +76,6 @@
     pkgs.fzf
     pkgs.zoxide
     pkgs.hyprshot
-    pkgs.wlogout
     pkgs.heroic
     pkgs.git
     pkgs.lm_sensors
@@ -101,6 +100,7 @@
     pkgs.celluloid
     pkgs._7zz-rar
     pkgs.p7zip-rar
+    pkgs.dua
   ];
   fonts.packages = with pkgs; [
     noto-fonts

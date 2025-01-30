@@ -10,7 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
-      url = "github:danth/stylix/master";
+      #url = "github:danth/stylix/master";
+      #url = "/home/ari/Documents/two/stylix";
+      url = "github:ari-rs/stylix/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {

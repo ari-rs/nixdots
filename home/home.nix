@@ -15,11 +15,15 @@
     ../config/xdg.nix
     ../config/tmux.nix
     ../config/yazi.nix
+    ../config/wlogout.nix
   ];
   programs.btop.enable = true;
   services.dunst.enable = true;
   programs.fuzzel.enable = true;
   stylix.targets.rofi.enable = false;
+  stylix.targets.vesktop.enable = false;
+  stylix.targets.vencord.enable = false;
+  
 
   programs.git = {
     enable = true;
