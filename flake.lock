@@ -555,15 +555,15 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1738173295,
-        "narHash": "sha256-riQ747DtfKS/mR/W7D5IK8HihGQikwuwsbbOMlY1vQI=",
-        "owner": "ari-rs",
+        "lastModified": 1738278499,
+        "narHash": "sha256-q1SUyXSQ9znHTME53/vPLe+Ga3V1wW3X3gWfa8JsBUM=",
+        "owner": "danth",
         "repo": "stylix",
-        "rev": "43e9df1b522b94fc116d98220e06b4d94772c708",
+        "rev": "b00c9f46ae6c27074d24d2db390f0ac5ebcc329f",
         "type": "github"
       },
       "original": {
-        "owner": "ari-rs",
+        "owner": "danth",
         "ref": "master",
         "repo": "stylix",
         "type": "github"
