@@ -101,6 +101,9 @@
     pkgs._7zz-rar
     pkgs.p7zip-rar
     pkgs.dua
+    pkgs.osu-lazer-bin
+    pkgs.ludusavi
+    pkgs.caligula
   ];
   fonts.packages = with pkgs; [
     noto-fonts

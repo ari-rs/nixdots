@@ -10,7 +10,7 @@
     ../config/helix.nix
     ../config/hyprlock.nix
     ../config/kitty.nix
-    ../config/rofi.nix
+    #../config/rofi.nix
     ../config/spicetify.nix
     ../config/xdg.nix
     ../config/tmux.nix
